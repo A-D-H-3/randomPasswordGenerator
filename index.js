@@ -1,4 +1,5 @@
 const passwordBox = document.getElementById("password");
+const generateBtn = document.getElementById("generate-button");
 const length = 12;
 
 const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -20,9 +21,6 @@ function createPassword() {
   }
   passwordBox.value = password;
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  document
-    .getElementById("generate-button")
-    .addEventListener("click", createPassword);
+generateBtn.addEventListener("click", () => {
+  createPassword();
 });
