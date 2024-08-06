@@ -1,5 +1,6 @@
 const passwordBox = document.getElementById("password");
 const generateBtn = document.getElementById("generate-button");
+const copyImg = document.getElementById("copy-image");
 const length = 12;
 
 const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -23,4 +24,14 @@ function createPassword() {
 }
 generateBtn.addEventListener("click", () => {
   createPassword();
+});
+
+function copyPassword() {
+  passwordBox.select();
+  document.execCommand("copy");
+  alert("Password Copied");
+}
+
+copyImg.addEventListener("click", () => {
+  copyPassword();
 });
